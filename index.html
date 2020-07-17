@@ -4,10 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" scale="1.0">
 	<title>Movie Seat Booking</title>
-	<style>
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Rowdies&display=swap" rel="stylesheet"> 	<style>
 		body {
+			background: #303841;
 			padding: 0;
 			margin: 0;
+			font-family: 'Righteous', cursive;
+			color: #eee;
 		}
 		.container {
 			width: 100%;
@@ -16,16 +20,24 @@
 			justify-items: center;
 		}		
 		.movie {
-			border: 1px solid #999;
 			margin: 20px;
 			width: 400px;
-			height: 50px;
+			height: auto;
+			display: flex;
+			color: #eee;
+			justify-content: center;
+		}
+		.details {
+			font-family: 'Righteous', cursive;
+			margin-left: 20px;
 		}
 		.labels {
-			border: 1px solid #999;
-			margin: 20px;
+			margin: 5px;
 			width: 400px;
-			height: 50px;
+			height: auto;
+			padding: 10px;
+			color: #eee;
+			text-align: center;
 		}
 		.seats {
 			margin: 20px;
@@ -49,14 +61,12 @@
 		}
 		.seat {
 			display: inline-block;
-			background: #999;
+			background: #3a4750;
 			height: 20px;
 			width: 20px;
 			border-top-left-radius: 30px;
 			border-top-right-radius: 30px;
-			margin-bottom: :15px;
-			margin-right: 3px;
-			margin-left: 3px;
+			margin: 3px;
 		}
 	</style>
 </head>
@@ -64,37 +74,32 @@
 	<div class="container">
 		<div class="movie">
 
+			<div class="poster">
+				<img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Contagion_Poster.jpg/220px-Contagion_Poster.jpg" width="100px">	
+			</div>
+
+			<div class="details">
+				<h2>CONTAGION</h2>
+				<p>PRICE: Rs. 289</p>
+			</div>
+
 		</div>
 
 
 		<div class="labels">
+
+			<span class="seat" style="margin: 0;"></span> : Available 
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<span class="seat" style="background: #f6c90e; margin: 0"></span> : Selected 
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<span class="seat" style="background: #eeeeee; margin: 0"></span> : Occupied
 
 		</div>
 
 		<div class="seats">
 			<div class="section left-section">
 				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>				
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
+				<span class="seat" style="background: #f6c90e"></span>
 				<span class="seat"></span>
 				<br>
 				<span class="seat"></span>
@@ -106,6 +111,10 @@
 				<span class="seat"></span>				
 				<br>
 				<span class="seat"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat"></span>
+				<br>
+				<span class="seat"></span>
 				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
@@ -113,6 +122,7 @@
 				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
+
 			</div>
 
 			<div class="section mid-section">
@@ -137,40 +147,12 @@
 				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat" style="background: #eeeeee"></span>
 				<br>
 				<span class="seat"></span>
 				<span class="seat"></span>
@@ -213,24 +195,10 @@
 				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>				
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
 			</div>	
 		</div>	<!-- seats -->
+
+		
 	</div><!-- container -->
 </body>
 </html>
