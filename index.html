@@ -39,6 +39,15 @@
 			color: #eee;
 			text-align: center;
 		}
+		.screen {
+			width: 450px;
+			height: 200px;
+			background: #eee;
+			margin-top: 20px 0;
+			transform: rotateX(-45deg);
+			box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+			border-radius: 6px;
+		}
 		.seats {
 			margin: 20px;
 			width: 500px;
@@ -62,11 +71,28 @@
 		.seat {
 			display: inline-block;
 			background: #3a4750;
-			height: 20px;
+			height: 18px;
 			width: 20px;
-			border-top-left-radius: 30px;
-			border-top-right-radius: 30px;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
 			margin: 3px;
+			cursor: pointer;
+		}
+		.seat:not(.occupied):hover {
+			background: #f6c90e;
+		}
+		.selected {
+			background: #f6c90e;
+		}
+		.occupied {
+			background: #eeeeee;
+		}
+		.buttons {
+			display: flex;
+			width: 450px;
+			justify-content: space-between
+		}
+		button {
 		}
 	</style>
 </head>
@@ -96,10 +122,14 @@
 
 		</div>
 
-		<div class="seats">
+		<div class="screen">
+
+		</div>
+
+		<div class="seats seats-container">
 			<div class="section left-section">
 				<span class="seat"></span>
-				<span class="seat" style="background: #f6c90e"></span>
+				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
 				<span class="seat"></span>
@@ -111,7 +141,7 @@
 				<span class="seat"></span>				
 				<br>
 				<span class="seat"></span>
-				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
 				<span class="seat"></span>
@@ -147,12 +177,12 @@
 				<span class="seat"></span>
 				<span class="seat"></span>
 				<br>
-				<span class="seat" style="background: #eeeeee"></span>
-				<span class="seat" style="background: #eeeeee"></span>
-				<span class="seat" style="background: #eeeeee"></span>
-				<span class="seat" style="background: #eeeeee"></span>
-				<span class="seat" style="background: #eeeeee"></span>
-				<span class="seat" style="background: #eeeeee"></span>
+				<span class="seat"></span>
+				<span class="seat"></span>
+				<span class="seat"></span>
+				<span class="seat"></span>
+				<span class="seat"></span>
+				<span class="seat"></span>
 				<br>
 				<span class="seat"></span>
 				<span class="seat"></span>
@@ -198,7 +228,14 @@
 			</div>	
 		</div>	<!-- seats -->
 
+		<div class="buttons">
+			<button class="prev"> <-- Change Movie </button>
+
+			<button class="btn" style="margin-right: 0"disabled> Get Tickets --></button>
+		</div>
 		
 	</div><!-- container -->
+	<script src="./app.js">
+	</script>
 </body>
 </html>
