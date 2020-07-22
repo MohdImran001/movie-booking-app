@@ -1,248 +1,233 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" scale="1.0">
-	<title>Movie Seat Booking</title>
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet"> 	
- 	<style>
-		body {
-			background: #1b262c;
-			padding: 0;
-			margin: 0;
-			font-family: 'Josefin Sans', sans-serif;
-			color: #eee;
-		}
-		.container {
-			width: 100%;
-			height: auto;
-			display: grid;
-			justify-items: center;
-		}		
-		.movie {
-			margin: 20px;
-			width: 400px;
-			height: auto;
-			display: flex;
-			justify-content: center;
-		}
-		.details {
-			margin-left: 20px;
-		}
-		.labels {
-			margin: 5px;
-			width: 500px;
-			height: auto;
-			padding: 10px;
-			text-align: center;
-			font-size: 14px;
-			font-family: sans-serif;
-		}
-		.screen {
-			width: 450px;
-			height: 200px;
-			background: #eee;
-			margin-top: 20px 0;
-			transform: rotateX(-45deg);
-			box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
-			border-radius: 6px;
-		}
-		.seats {
-			margin: 20px;
-			width: 500px;
-			height: auto;
-			display: flex;
-			justify-content: center;
-		}
-		.section {
-			height: auto;
-			padding: 20px;
-		}
-		.left-section {
-			width: 40%;
-		}
-		.mid-section {
-			width: 80%;
-		}
-		.right-section {
-			width: 40%;
-		}
-		.seat {
-			display: inline-block;
-			background: #3a4750;
-			height: 18px;
-			width: 20px;
-			border-top-left-radius: 50px;
-			border-top-right-radius: 50px;
-			margin: 3px;
-			cursor: pointer;
-		}
-		.seat:not(.occupied):hover {
-			background: #f6c90e;
-		}
-		.selected {
-			background: #f6c90e;
-		}
-		.occupied {
-			background: #eeeeee;
-		}
-		.buttons {
-			display: flex;
-			width: 450px;
-			justify-content: space-between
-		}
-		.buttons button {
-			background: #3282b8;
-			color: #fff;
-			padding: 18px;
-			border: 0;
-			border-radius: 5px;
-			font-weight: bolder;
-			font-size: 16px;
-			cursor: pointer;
-		}
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Movie-Booking-App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
 </head>
-<body>
-	<div class="container">
-		<div class="movie">
 
-			<div class="poster">
-				<img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Contagion_Poster.jpg/220px-Contagion_Poster.jpg" width="100px">	
-			</div>
+<body style="font-family: poppins;color: #42424c;">
+    <ul class="nav nav-fill" style="border-width: 1px;border-color: #eee;border-bottom-style: solid;">
+        <li class="nav-item"><a class="nav-link active"><i class="fa fa-long-arrow-left"></i></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-sm-left text-md-center text-lg-center text-xl-center" style="height: 47px;color: #42424c;font-size: 20px;font-family: poppins;">Pick your seat</a></li>
+        <li class="nav-item"></li>
+    </ul>
+    <div>
+        <div class="container-fluid d-flex justify-content-center" style="margin-top: 20px;/*width: 300px;*/"><img width="130px" src="https://cdn.chili.com/images/public/cms/d7/53/9c/b1/d7539cb1-cb62-4d89-8a94-94df8b20afe8.jpg?width=800" style="margin-right: 20px;border-radius: 7px;width: 110px;height: 150px;" height="0">
+            <div style="margin-left: 10px;/*width: 300px;*/">
+                <h4 style="margin-left: 11px;">Incredibles 2</h4>
+                <div class="table-responsive" style="width: 200px;font-size: 12px;">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="font-size: 10px;border-top: 0;line-height: 15px;">Show Time</td>
+                                <td style="font-size: 10px;border-top: 0;line-height: 15px;">Date</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">10:14 am</td>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">5 Aug 2020</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 10px;border-top: 0;line-height: 15px;">Cinema</td>
+                                <td style="font-size: 10px;border: 0;">Ticket</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">XYZ Cinema</td>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">Rs. 200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center" style="margin-top: 20px;/*border-style: solid;*//*border-bottom: 1px solid #eee;*/">
+        <p class="labels"><i class="fas fa-circle" style="margin-right: 10px;color: #025CE1;/*border-radius: 50pxpx;*//*border: 1px solid #025CE1;*//*background-color: #025CE1;*/"></i>Selected&nbsp;<i class="far fa-circle" style="margin-right: 10px;color: #025CE1;/*border-radius: 50pxpx;*/margin-left: 10px;"></i>Available
+            <i
+                class="fas fa-circle" style="margin-right: 10px;color: #999;/*border-radius: 50pxpx;*/margin-left: 10px;"></i>Occupied</p>
+    </div>
 
-			<div class="details">
-				<h2>CONTAGION</h2>
-				<p>PRICE: Rs. 289</p>
-			</div>
+    <br>
+    <div class="container text-center">
+        <img src="./screen.png" class="img-fluid">    
+    </div>
+    <br>
 
-		</div>
+    <div class="container seats-container">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td>&nbsp;1</td>
+                    <td>&nbsp;2</td>
+                    <td>&nbsp;3</td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td>&nbsp;4</td>
+                    <td>&nbsp;5</td>
+                    <td>&nbsp;6</td>
+                    <td>&nbsp;7</td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td>&nbsp;8</td>
+                    <td>&nbsp;9</td>
+                    <td>&nbsp;10</td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 4 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 5 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+                <tr>
+                    <td> 6 </td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td><span class="seat"></span></td>
+                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="container text-center checkout-bar">
+        <p>Total:- Rs 400</p>
+        <button class="btn btn-primary">Checkout</button>
+    </div>
 
 
-		<div class="labels">
-
-			<span class="seat" style="margin: 0;"></span> : Available 
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<span class="seat" style="background: #f6c90e; margin: 0"></span> : Selected 
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<span class="seat" style="background: #eeeeee; margin: 0"></span> : Occupied
-
-		</div>
-
-		<div class="screen">
-
-		</div>
-
-		<div class="seats seats-container">
-			<div class="section left-section">
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>				
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-
-			</div>
-
-			<div class="section mid-section">
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-			</div>
-
-			<div class="section right-section">
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>				
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<span class="seat"></span>
-				<br>
-			</div>	
-		</div>	<!-- seats -->
-
-		<div class="buttons">
-			<button class="prev"> <-- Change Movie </button>
-
-			<button class="btn" style="margin-right: 0"disabled> Get Tickets --></button>
-		</div>
-		
-	</div><!-- container -->
-	<script src="./app.js">
-	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
