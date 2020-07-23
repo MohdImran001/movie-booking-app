@@ -1,0 +1,10 @@
+.box {
+	padding: 20px;
+	border: 2px solid #eee;
+	border-radius: 7px;
+}
+
+.table-responsive {
+	border-top: 2px solid #eee;
+	border-bottom: 2px solid #eee;
+}
