@@ -1,11 +1,9 @@
 <script>
-	export let name;
+	import Movies from './views/movies.svelte';
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
+<Movies />
 
-<h1>Hello {name}!</h1>
+<style>
+
+</style>

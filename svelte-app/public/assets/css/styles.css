@@ -1,0 +1,14 @@
+.col-md-3 {
+  margin-top: 50px;
+}
+
+.img-fluid {
+  max-width: 200px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.img-fluid, h4 {
+  cursor: pointer;
+}
+
