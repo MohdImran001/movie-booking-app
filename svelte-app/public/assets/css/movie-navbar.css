@@ -1,6 +1,59 @@
 .fa.fa-long-arrow-left {
   font-size: 28px;
-  color: #42424c;
+  color: #007bff;
   cursor: pointer;
 }
 
+.screen {
+	max-width: 400px;
+}
+
+.labels {
+	border-bottom: 2px solid #eee;
+	border-top: 2px solid #eee;
+	padding: 7px;
+}
+
+.seats-container {
+	display: flex;
+	justify-content: center;
+}
+
+.seats-container table tbody tr td{
+	padding: 4px;
+}
+
+.seat {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	border: 1px solid #999;
+	cursor: pointer;
+}
+
+.selected {
+	background: #025CE1;
+	border-color: #025CE1;
+}
+
+.seat:not(.occupied):hover {
+	border-color: #025CE1;
+}
+
+.occupied {
+	background: #999;
+}
+
+.checkout-bar {
+	margin-top: 25px;
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.checkout-bar p {
+	padding-top: 17px;
+	font-weight: bolder;
+	font-size: 18px;
+}

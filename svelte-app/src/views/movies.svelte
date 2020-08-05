@@ -1,8 +1,11 @@
 <script>
-	import { movies } from '../stores/moviesStore.js';
+	import { createEventDispatcher } from 'svelte'; 
+  import { movies } from '../stores/moviesStore.js';
+
+  const dispatch = createEventDispatcher();
 
 	const bookSeats = (id) => {
-		console.log(id);
+		dispatch('bookSeats', {id: id});
 	}
 </script>
 
@@ -22,7 +25,7 @@
             {/each}
             </div>
         </div>
-    </div>
+  </div>
 
 <style>
 .col-md-3 {
