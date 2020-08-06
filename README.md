@@ -1,23 +1,17 @@
-# svelte app
+# svelte movie booking app
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+This app is made using svelte.js. It is a movie seat booking app. It consists of three components (movies, seats-booking, e-ticket). Select a movie and then select the desired seats, this app will generate an e-ticket for you that you can download as a pdf on your device.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
-```
+While working on this project, I learned about svelte modules, hooks (onMount and onDestroy), transitions, reactive values, local storage, stores etc.
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
 
 ## Get started
 
-Install the dependencies...
+Clone the app and Install the dependencies...
 
 ```bash
-cd svelte-app
 npm install
 ```
 
@@ -27,38 +21,4 @@ npm install
 npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+Navigate to [localhost:8080](http://localhost:8080). You should see the app running. 
