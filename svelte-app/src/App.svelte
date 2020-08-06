@@ -28,7 +28,7 @@
 {:else if activeItem === "SelectSeats"}
 	<Seats {id} on:click={goBackToMovies} on:checkout={getTicket}/>
 {:else if activeItem === "ETicket"}
-	<ETicket {id} {seats} {amount}/>
+	<ETicket {id} {seats} {amount} on:click={goBackToMovies}/>
 {/if}
 
 <style>

@@ -1,6 +1,7 @@
 <script>
   	import { movies } from '../stores/moviesStore.js';
   	import { onMount, createEventDispatcher } from 'svelte';
+    import { fade, fly, slide } from 'svelte/transition';
 	export let id;
     const dispatch = createEventDispatcher();
 	const movie = $movies.find(m => m.id == id);
@@ -20,7 +21,6 @@
 				[...seats][seatIndex].classList.add('occupied');
 			})
 		}
-		btn.removeAttribute('disabled');
 
 		seatsContainer.addEventListener('click', (e) => {
 			if(e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
@@ -36,19 +36,21 @@
 	})
 
 	const checkout = () => {
-		const selectedSeats = document.querySelectorAll('.selected');
-		const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+        if(totalPrice > 0) {
+            const selectedSeats = document.querySelectorAll('.selected');
+            const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
 
-		let occupiedSeats = JSON.parse(localStorage.getItem(`${movie.id}-occupiedSeats`));
-		if(occupiedSeats != null && occupiedSeats.length > 0) {
-			occupiedSeats = occupiedSeats.concat(seatsIndex);
-			localStorage.setItem(`${movie.id}-occupiedSeats`, JSON.stringify(occupiedSeats));
-		}
-		else {
-			localStorage.setItem(`${movie.id}-occupiedSeats`, JSON.stringify(seatsIndex));
-		}
+            let occupiedSeats = JSON.parse(localStorage.getItem(`${movie.id}-occupiedSeats`));
+            if(occupiedSeats != null && occupiedSeats.length > 0) {
+                occupiedSeats = occupiedSeats.concat(seatsIndex);
+                localStorage.setItem(`${movie.id}-occupiedSeats`, JSON.stringify(occupiedSeats));
+            }
+            else {
+                localStorage.setItem(`${movie.id}-occupiedSeats`, JSON.stringify(seatsIndex));
+            }
 
-        dispatch('checkout', { id: movie.id, amount: totalPrice, seats: seatsIndex});
+            dispatch('checkout', { id: movie.id, amount: totalPrice, seats: seatsIndex});
+        }
 	};
 </script>
 
@@ -57,7 +59,7 @@
         <li class="nav-item"><a class="nav-link text-left text-sm-left text-md-center text-lg-center text-xl-center" style="height: 47px;color: #42424c;font-size: 20px;font-family: poppins;">Pick your seat</a></li>
         <li class="nav-item"></li>
 	</ul>
-
+<div in:fade out:fade>
 	<div>
         <div class="container-fluid d-flex justify-content-center" style="margin-top: 20px;/*width: 300px;*/"><img width="130px" src="{movie.portrait}" style="margin-right: 20px;border-radius: 7px;width: 110px;height: 150px;" height="0">
             <div style="margin-left: 10px;/*width: 300px;*/">
@@ -259,7 +261,7 @@
         <p>Total:- Rs {totalPrice}</p>
         <button class="btn btn-primary" on:click={checkout}>Checkout</button>
     </div>
-
+</div>
 
 <style>
 
