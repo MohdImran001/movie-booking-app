@@ -264,6 +264,9 @@
         <p>Total:- Rs {totalPrice}</p>
         <button class="btn btn-primary" on:click={checkout}>Checkout</button>
     </div>
+    <br/>
+    <br/>
+    <br/>
 </div>
 
 <style>

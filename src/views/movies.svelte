@@ -11,8 +11,8 @@
 </script>
 
 	<ul class="nav nav-fill" style="border-width: 1px;border-color: #eee;border-bottom-style: solid;">
-  	    <li class="nav-item"><a class="nav-link active" style="color: #007bff;"></a></li>
-  	  	<li class="nav-item"><a class="nav-link text-left text-sm-center text-md-center text-lg-center text-xl-center" style="height: 47px;color: #42424c;font-size: 20px;font-family: poppins;">Select A Movie</a></li>
+  	    <li class="nav-item"></li>
+  	  	<li class="nav-item"><a class="nav-link text-center text-sm-center text-md-center text-lg-center text-xl-center" style="height: 47px;color: #42424c;font-size: 20px;font-family: poppins;">Select A Movie</a></li>
   	  	<li class="nav-item"></li>
 	</ul>
 
