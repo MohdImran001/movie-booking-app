@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte'; 
+	import { createEventDispatcher } from 'svelte';
   import { movies } from '../stores/moviesStore.js';
   import { fade, fly, slide } from 'svelte/transition';
 
@@ -20,8 +20,8 @@
         <div class="container">
             <div class="row row-cols-sm-2 row-cols-md-4 text-center" style="margin-bottom: 20px;">
             {#each $movies as movie (movie.id)}
-                <div class="col-md-3" on:click={() => bookSeats(movie.id)}>
-                	<img class="img-fluid" src="{movie.portrait}">
+                <div class="col-md-3" style="margin-top: 50px;" on:click={() => bookSeats(movie.id)}>
+                	<img class="img-fluid portrait" src="{movie.portrait}">
                     <h5>{movie.name}</h5>
                 </div>
             {/each}
@@ -30,17 +30,5 @@
   </div>
 
 <style>
-.col-md-3 {
-  margin-top: 50px;
-}
 
-.img-fluid {
-  max-width: 200px;
-  border-radius: 7px;
-  margin-bottom: 20px;
-}
-
-.img-fluid, h5 {
-  cursor: pointer;
-}
 </style>

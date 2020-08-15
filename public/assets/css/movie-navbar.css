@@ -4,6 +4,22 @@
   cursor: pointer;
 }
 
+.portrait {
+    max-width: 200px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.portrait, h5 {
+    cursor: pointer;
+}
+
+.box {
+	padding: 20px;
+	border: 2px solid #eee;
+	border-radius: 7px;
+}
+
 .screen {
 	max-width: 400px;
 }

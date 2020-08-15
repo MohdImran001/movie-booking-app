@@ -11,7 +11,7 @@
 	let el;
 	onMount(() => {
 		el = document.getElementById('e-ticket');
-		
+
 	})
 
 	const downloadPdf = () => {
@@ -26,15 +26,15 @@
 <ul class="nav nav-fill" style="border-width: 1px;border-color: #eee;border-bottom-style: solid;">
     <li class="nav-item"><a class="nav-link active"><i class="fa fa-long-arrow-left" on:click></i></a></li>
     <li class="nav-item"><a class="nav-link text-center text-sm-center text-md-center text-lg-center text-xl-center" style="height: 47px;color: #42424c;font-size: 20px;font-family: poppins;">E-Ticket</a></li>
-    <li class="nav-item"><a class="nav-link" href="#" style="height: 47px;font-size: 20px;cursor: pointer;"></a></li>
+    <li class="nav-item"><a class="nav-link"  style="height: 47px;font-size: 20px;cursor: pointer;"></a></li>
 </ul>
 
 <div in:slide class="container d-flex flex-column align-items-center" style="margin-top: 10px;/*border: 2px solid #eee;*/border-radius: 5px;padding-top: 15px;padding-bottom: 15px;">
     <div id="e-ticket" class="box d-flex flex-column align-items-center" >
 
-        <img class="img-fluid" src="{movie.landscape}" style="">
+        <img class="img-fluid" src="{movie.landscape}" style="max-width: 320px;border-radius: 10px;">
         <h4 style="margin-top: 20px;font-weight: bold;">{movie.name}</h4>
-        <div class="table-responsive d-flex justify-content-center" style="margin-top: 20px;/*text-align: center;*/">
+        <div class="table-responsive d-flex justify-content-center" style="border-top: 2px solid #eee;border-bottom: 2px solid #eee;">
             <table class="table" style="max-width: 320px;/*text-align: center;*/">
                 <tbody>
                     <tr>
@@ -67,19 +67,5 @@
 </div>
 
 <style>
-.box {
-	padding: 20px;
-	border: 2px solid #eee;
-	border-radius: 7px;
-}
 
-img {
-	max-width: 320px;
-	border-radius: 10px;
-}
-
-.table-responsive {
-	border-top: 2px solid #eee;
-	border-bottom: 2px solid #eee;
-}
 </style>
