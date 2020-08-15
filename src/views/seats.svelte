@@ -3,9 +3,12 @@
   	import { onMount, createEventDispatcher } from 'svelte';
     import { fade, fly, slide } from 'svelte/transition';
 	export let id;
+    export let date;
+    export let time;
+
     const dispatch = createEventDispatcher();
 	const movie = $movies.find(m => m.id == id);
-	
+
 	let totalPrice = 0;
 	let seatsContainer, seats, btn;
 
@@ -72,8 +75,8 @@
                                 <td style="font-size: 10px;border-top: 0;line-height: 15px;">Date</td>
                             </tr>
                             <tr>
-                                <td style="border: 0;line-height: 0;font-weight: bold;">10:14 am</td>
-                                <td style="border: 0;line-height: 0;font-weight: bold;">15 Aug 2020</td>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">{time}</td>
+                                <td style="border: 0;line-height: 0;font-weight: bold;">{date}</td>
                             </tr>
                             <tr>
                                 <td style="font-size: 10px;border-top: 0;line-height: 15px;">Cinema</td>
@@ -96,7 +99,7 @@
 
     <br>
     <div class="container text-center">
-        <img src="./screen.png" class="img-fluid screen">    
+        <img src="./screen.png" class="img-fluid screen">
     </div>
     <br>
 
@@ -109,7 +112,7 @@
                     <td>&nbsp;1</td>
                     <td>&nbsp;2</td>
                     <td>&nbsp;3</td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td>&nbsp;4</td>
@@ -130,7 +133,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>
@@ -151,7 +154,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>
@@ -172,7 +175,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>
@@ -193,7 +196,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>
@@ -214,7 +217,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>
@@ -235,7 +238,7 @@
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
                     <td><span class="seat"></span></td>
-                    
+
                     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
                     <td><span class="seat"></span></td>

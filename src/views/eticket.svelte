@@ -6,19 +6,16 @@
 	export let id = 3;
 	export let seats = [];
 	export let amount = 0;
+	export let date;
+	export let time;
+
 	const movie = $movies.find(m => m.id == id);
-
-	let el;
-	onMount(() => {
-		el = document.getElementById('e-ticket');
-
-	})
 
 	const downloadPdf = () => {
 		html2pdf()
 		.set({ html2canvas: { scale: 4 } })
 		.from(el)
-		.save();
+		.save("e-ticket.pdf");
 	}
 </script>
 
@@ -42,7 +39,7 @@
                         <td class="float-right" style="border-top: 0;">Cinema</td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold;border-top: 0;">15 Aug 2020</td>
+                        <td style="font-weight: bold;border-top: 0;">{date}</td>
                         <td class="float-right" style="font-weight: bold;border-top: 0;">XYZ Cinema Hall</td>
                     </tr>
                     <tr>
@@ -50,7 +47,7 @@
                         <td class="float-right" style="border-top: 0;">Seats</td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold;border-top: 0;">10:15 AM</td>
+                        <td style="font-weight: bold;border-top: 0;">{time}</td>
                         <td class="float-right" style="font-weight: bold;border-top: 0;">
                         	{seats}
                         </td>
