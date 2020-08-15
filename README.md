@@ -6,7 +6,6 @@ While working on this project, I learned about svelte modules, hooks (onMount an
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-
 ## Get started
 
 Clone the app and Install the dependencies...
@@ -21,4 +20,4 @@ npm install
 npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see the app running. 
+Navigate to [localhost:8080](http://localhost:8080). You should see the app running.

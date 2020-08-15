@@ -12,6 +12,7 @@
 	const movie = $movies.find(m => m.id == id);
 
 	const downloadPdf = () => {
+		const el = document.getElementById('e-ticket');
 		html2pdf()
 		.set({ html2canvas: { scale: 4 } })
 		.from(el)
